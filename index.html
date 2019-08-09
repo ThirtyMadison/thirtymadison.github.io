@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thirty Madison - Best Coding Practices</title>
+    <link href="./application.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="./buttons.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="./tomorrow.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+
+  <body class="docs description">
+    <header id="header">
+      <h1><a href="https://thirtymadison.github.io/">Thirty Madison <span>{ Coding Best Practices }</span></a></h1>
+      <h2><a href="https:/thirtymadison.github.io/">Documentation</a></h2>
+    </header>
+
+    <article id="article">
+      <nav id="nav">
+        <ul>
+          <li><a href="http://www.betterspecs.org/">Introduction to TM Guideliness</a></li>
+        </ul>
+      </nav>
+      <section id="section">
+        <div class="content">
+          <article>
+            <h1><a name="describe">Introduction to TM Guidelines</a></h1>
+            <p>
+            Be clear about what method you are describing. For instance, use the Ruby documentation convention of
+            <code>.</code> (or <code>::</code>) when referring to a class method's name and <code>#</code> when
+            referring to an instance method's name.
+            </p>
+
+            <p class="wrong">bad</p>
+            <div>
+              <pre><code class="ruby">describe <span class="string">'the authenticate method for User'</span> <span class="keyword">do</span>
+            describe <span class="string">'if the user is an admin'</span> <span class="keyword">do</span>
+              </code></pre>
+            </div>
+            <p class="correct">good</p>
+            <div>
+            <pre><code class="ruby">describe <span class="string">'.authenticate'</span> <span class="keyword">do</span>
+            describe <span class="string">'#admin?'</span> <span class="keyword">do</span>
+            </code></pre>
+            </div>
+            <p>
+              <a href="https://github.com/andreareginato/betterspecs/issues/2">Discuss this guideline →</a>
+            </p>
+          </article>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
